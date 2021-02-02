@@ -1,0 +1,12 @@
+---
+title: "R Markdown Presentation & Plotly"
+author: yuxi
+date: Feb 02, 2021
+output: ioslides_presentation
+---
+
+# 
+
+```{r, cars, fig.cap="A scatterplot.", echo=FALSE}
+plot(cars)
+```
