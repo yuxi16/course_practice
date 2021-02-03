@@ -1,6 +1,6 @@
 ## Usage
 
-In order to use it,go to the URL of any HTML file: 
+In order to use it, go to the URL: 
 [https://htmlpreview.github.io/?](https://htmlpreview.github.io/?)
 
 Input:
