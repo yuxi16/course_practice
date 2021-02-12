@@ -1,0 +1,38 @@
+---
+title: "presentation"
+author: "yuxi"
+output: ioslides_presentation
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+#The World's Telephones
+
+##Description
+The number of telephones in various regions of the world (in thousands).
+
+```{r}
+library(tidyr)   # For pivoting the data into long form 
+library(tibble)  # For converting the rownames (Year) to a column
+library(scales)  # For scaing the y-axis and labels
+library(ggplot2) # For the plot
+```
+```{r}
+summary(WorldPhones)
+```
+
+```{r}
+WorldPhones %>%
+  as.data.frame() %>%
+  rownames_to_column("Year") %>%
+  pivot_longer(cols=-Year, names_to="Country", values_to="Users") %>%
+  ggplot(aes(Year, Users, group=Country, col=Country)) +
+  geom_line() +
+  scale_y_log10(n.breaks=5, labels = trans_format("log10", math_format(10^.x))) +
+  theme_minimal() 
+```
+
