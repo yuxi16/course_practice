@@ -1,12 +1,19 @@
 ---
 title: "R Markdown Presentation & Plotly"
-author: yuxi
-date: Feb 02, 2021
+author: "yuxi"
+date: "Feb 02, 2021"
 output: ioslides_presentation
 ---
+## Total four slides
+- Title
+- Introduction
+- Code
+- Interactive Plot created with Plotly
 
-# 
-
-```{r, cars, fig.cap="A scatterplot.", echo=FALSE}
-plot(cars)
+---
+```{r}
+library(plotly)
+str(volcano)
+plot_ly(z=~volcano, type="surface")
 ```
+---
