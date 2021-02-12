@@ -1,5 +1,5 @@
 ---
-title: "R Markdown Presentation & Plotly"
+title: "R Markdown Presentation & Plotly(Total four slides)"
 author: "yuxi"
 date: "Feb 02, 2021"
 output: ioslides_presentation
